@@ -1,0 +1,219 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match The Cosmic Bloom brand palette */
+  /* Unificando com a paleta da seção inicial - tons escuros e vermelhos cósmicos */
+  --background: #0a0a0a; /* Obsidian Black - mesmo tom da seção inicial */
+  --foreground: #f2f1ed; /* Soft Pearl */
+  /* Card com tom escuro cósmico suave */
+  --card: #1a0a0a; /* Dark Crimson - tom vermelho escuro */
+  --card-foreground: #f2f1ed; /* Soft Pearl */
+  --popover: #710014; /* Crimson Depth */
+  --popover-foreground: #f2f1ed; /* Soft Pearl */
+  --primary: #710014; /* Crimson Depth */
+  --primary-foreground: #f2f1ed; /* Soft Pearl */
+  --secondary: #8a1a1a; /* Deeper Crimson */
+  --secondary-foreground: #f2f1ed; /* Soft Pearl */
+  /* Muted com tom escuro cósmico médio */
+  --muted: #2a0a0a; /* Dark Crimson Medium - vermelho escuro médio */
+  --muted-foreground: #b38f6f; /* Warm Sand para contraste suave */
+  --accent: #8a1a1a; /* Deeper Crimson */
+  --accent-foreground: #f2f1ed; /* Soft Pearl */
+  --destructive: #710014; /* Crimson Depth */
+  --destructive-foreground: #f2f1ed; /* Soft Pearl */
+  /* Bordas com tom escuro cósmico claro */
+  --border: #4a2c1a; /* Dark Golden - dourado escuro para bordas */
+  --input: #1a0a0a; /* Dark Crimson */
+  --ring: #710014; /* Crimson Depth */
+  --chart-1: #710014; /* Crimson Depth */
+  --chart-2: #8a1a1a; /* Deeper Crimson */
+  --chart-3: #b38f6f; /* Warm Sand */
+  --chart-4: #f2f1ed; /* Soft Pearl */
+  --chart-5: #161616; /* Obsidian Black */
+  --radius: 0.5rem;
+  /* Sidebar com tons cósmicos escuros */
+  --sidebar: #0a0a0a; /* Obsidian Black */
+  --sidebar-foreground: #f2f1ed; /* Soft Pearl */
+  --sidebar-primary: #710014; /* Crimson Depth */
+  --sidebar-primary-foreground: #f2f1ed; /* Soft Pearl */
+  --sidebar-accent: #8a1a1a; /* Deeper Crimson */
+  --sidebar-accent-foreground: #f2f1ed; /* Soft Pearl */
+  --sidebar-border: #4a2c1a; /* Dark Golden */
+  --sidebar-ring: #710014; /* Crimson Depth */
+}
+
+.dark {
+  /* Updated dark mode tokens to maintain brand consistency */
+  --background: #0a0a0a; /* Obsidian Black */
+  --foreground: #f2f1ed; /* Soft Pearl */
+  --card: #1a0a0a; /* Dark Crimson */
+  --card-foreground: #f2f1ed; /* Soft Pearl */
+  --popover: #1a0a0a; /* Dark Crimson */
+  --popover-foreground: #f2f1ed; /* Soft Pearl */
+  --primary: #710014; /* Crimson Depth */
+  --primary-foreground: #f2f1ed; /* Soft Pearl */
+  --secondary: #b38f6f; /* Warm Sand */
+  --secondary-foreground: #0a0a0a; /* Obsidian Black */
+  --muted: #b38f6f; /* Warm Sand */
+  --muted-foreground: #0a0a0a; /* Obsidian Black */
+  --accent: #b38f6f; /* Warm Sand */
+  --accent-foreground: #0a0a0a; /* Obsidian Black */
+  --destructive: #710014; /* Crimson Depth */
+  --destructive-foreground: #f2f1ed; /* Soft Pearl */
+  --border: #b38f6f; /* Warm Sand */
+  --input: #b38f6f; /* Warm Sand */
+  --ring: #710014; /* Crimson Depth */
+  --chart-1: #710014; /* Crimson Depth */
+  --chart-2: #8a1a1a; /* Deeper Crimson */
+  --chart-3: #b38f6f; /* Warm Sand */
+  --chart-4: #f2f1ed; /* Soft Pearl */
+  --chart-5: #0a0a0a; /* Obsidian Black */
+  --sidebar: #0a0a0a; /* Obsidian Black */
+  --sidebar-foreground: #f2f1ed; /* Soft Pearl */
+  --sidebar-primary: #710014; /* Crimson Depth */
+  --sidebar-primary-foreground: #f2f1ed; /* Soft Pearl */
+  --sidebar-accent: #b38f6f; /* Warm Sand */
+  --sidebar-accent-foreground: #0a0a0a; /* Obsidian Black */
+  --sidebar-border: #b38f6f; /* Warm Sand */
+  --sidebar-ring: #710014; /* Crimson Depth */
+}
+
+@theme inline {
+  /* Updated font configuration for gothic aesthetic */
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --font-serif: "Cinzel Decorative", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added cosmic-themed animations and effects */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar with brand colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #710014;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b38f6f;
+}
+
+/* Added cosmic gradient backgrounds */
+.cosmic-gradient {
+  background: linear-gradient(135deg, #0a0a0a 0%, #4a0008 30%, #710014 50%, #4a0008 70%, #0a0a0a 100%);
+  position: relative;
+}
+
+.cosmic-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.cosmic-text-gradient {
+  background: linear-gradient(135deg, #710014, #b38f6f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
